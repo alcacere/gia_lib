@@ -6,7 +6,7 @@
 /*   By: gigarcia <gigarcia@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 23:52:30 by gigarcia          #+#    #+#             */
-/*   Updated: 2026/01/19 00:08:39 by gigarcia         ###   ########.fr       */
+/*   Updated: 2026/01/24 20:23:16 by gigarcia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-		return(c + 32);
+		return (c + 32);
 	return (c);
 }

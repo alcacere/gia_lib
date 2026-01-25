@@ -6,7 +6,7 @@
 /*   By: gigarcia <gigarcia@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 19:01:46 by gigarcia          #+#    #+#             */
-/*   Updated: 2026/01/18 19:33:21 by gigarcia         ###   ########.fr       */
+/*   Updated: 2026/01/25 16:27:59 by gigarcia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	const char *tmp_src;
-	unsigned char *tmp_dest;
+	const char		*tmp_src;
+	unsigned char	*tmp_dest;
 
 	tmp_src = (const char *)src;
 	tmp_dest = (unsigned char *)dest;
-
 	while (n > 0)
 	{
 		*tmp_dest = *tmp_src;
@@ -27,10 +26,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		tmp_src++;
 		n--;
 	}
-
 	return (dest);
 }
-
 /*
 int main ()
 {

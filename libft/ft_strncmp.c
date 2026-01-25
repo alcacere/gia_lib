@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gigarcia <gigarcia@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/19 00:26:08 by gigarcia          #+#    #+#             */
-/*   Updated: 2026/01/24 20:22:57 by gigarcia         ###   ########.fr       */
+/*   Created: 2026/01/25 06:34:21 by gigarcia          #+#    #+#             */
+/*   Updated: 2026/01/25 08:19:10 by gigarcia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char	*tmp;
+	size_t	i;
 
-	tmp = (char *)s;
-	tmp += ft_strlen(tmp);
-	if (c == '\0')
-		return (tmp);
-	while (tmp >= s)
+	i = 0;
+	while ((s1[i] || s2[i]) && i < n)
 	{
-		if (*tmp == (char)c)
-			return (tmp);
-		tmp--;
+		if (s1[i] != s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		i++;
 	}
-	return (NULL);
+	return (0);
 }
 /*
-int	main()
+int main()
 {
-	char	*str = "la vaca lola";
-
-	printf("%s\n", ft_strrchr(str, '\0'));
-}*/
+	printf("%d\n", ft_strncmp("pa", "papa", 5));
+}
+*/

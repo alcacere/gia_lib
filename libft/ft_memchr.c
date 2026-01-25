@@ -1,37 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gigarcia <gigarcia@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/19 00:26:08 by gigarcia          #+#    #+#             */
-/*   Updated: 2026/01/24 20:22:57 by gigarcia         ###   ########.fr       */
+/*   Created: 2026/01/25 08:19:37 by gigarcia          #+#    #+#             */
+/*   Updated: 2026/01/25 08:42:02 by gigarcia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char	*tmp;
+	size_t			i;
+	unsigned char	*temp;
 
-	tmp = (char *)s;
-	tmp += ft_strlen(tmp);
-	if (c == '\0')
-		return (tmp);
-	while (tmp >= s)
+	i = 0;
+	temp = (unsigned char *)s;
+	while (i < n)
 	{
-		if (*tmp == (char)c)
-			return (tmp);
-		tmp--;
+		if (temp[i] == (unsigned char)c)
+			return (temp + i);
+		i++;
 	}
-	return (NULL);
+	return (0);
 }
 /*
-int	main()
+int main()
 {
-	char	*str = "la vaca lola";
+	char buf[5] = {'a', '\0', 'b', 'c', 'd'};
+	
+	printf("%c\n", *(char *)ft_memchr(buf, 'b', 5)); // prints 'b'
+	printf("%p\n", ft_memchr(buf, 'x', 5));          // prints NULL
 
-	printf("%s\n", ft_strrchr(str, '\0'));
-}*/
+}
+*/

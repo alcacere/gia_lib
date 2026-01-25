@@ -6,13 +6,13 @@
 /*   By: gigarcia <gigarcia@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 00:08:51 by gigarcia          #+#    #+#             */
-/*   Updated: 2026/01/19 00:56:44 by gigarcia         ###   ########.fr       */
+/*   Updated: 2026/01/24 20:20:34 by gigarcia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	char	*tmp;
 
@@ -27,10 +27,10 @@ char *ft_strchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
-int main()
+/*
+int	main()
 {
-	const char *test = "la vaca lo\0la jeje";
+	const char	*test = "la vaca lo\0la jeje";
 
 	printf("%s\n", ft_strchr(test, '\0'));
-}
+}*/
