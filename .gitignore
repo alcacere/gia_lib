@@ -1,0 +1,22 @@
+# Archivos objeto y librerías
+*.o
+*.a
+*.so
+
+# Ejecutables (a.out es el clásico, añadir otros nombres si se usarán)
+a.out
+*.out
+*.exe
+
+# Archivos del sistema (Mac/Linux)
+.DS_Store
+.swp
+
+# Configuración de editores (opcional, pero recomendado)
+.vscode/
+.idea/
+
+# Valgrind
+vgcore.*
+
+libft.a
