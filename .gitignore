@@ -18,5 +18,3 @@ a.out
 
 # Valgrind
 vgcore.*
-
-libft.a
