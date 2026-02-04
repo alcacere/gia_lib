@@ -1,18 +1,18 @@
-# Archivos objeto y librerías
+# Object files and libraries
 *.o
 *.a
 *.so
 
-# Ejecutables (a.out es el clásico, añadir otros nombres si se usarán)
+# Executables
 a.out
 *.out
 *.exe
 
-# Archivos del sistema (Mac/Linux)
+# System files
 .DS_Store
 .swp
 
-# Configuración de editores (opcional, pero recomendado)
+# Editor configuration
 .vscode/
 .idea/
 
